@@ -8,7 +8,7 @@ import com.example.segundo_Examen_gynny.Persistence.entities.LibroEntity;
 @Mapper
 public interface LibroMapper {
 	
-	LibroDTO toDto(LibroEntity libro);
+	LibroDTO toDto(LibroEntity libroEntity);
 	LibroEntity toEntity(LibroDTO libroDTO);
 	
 	
