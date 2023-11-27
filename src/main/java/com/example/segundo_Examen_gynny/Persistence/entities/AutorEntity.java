@@ -1,16 +1,29 @@
 package com.example.segundo_Examen_gynny.Persistence.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
 public class AutorEntity {
 	
 	//atributos
-	private Long id;
-	private String nombre;
-	@OneToMany(mappedBy ="autor")
-	private String nacionalidad;
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+
+
+    private Long id;
+    private String nombre;
+    private String nacionalidad;
+
+    @OneToMany(mappedBy = "autor")
+    private List<LibroEntity> libros = new ArrayList<>();
+
 	
 	//Constructor
 	public AutorEntity(Long id, String nombre, String nacionalidad) {

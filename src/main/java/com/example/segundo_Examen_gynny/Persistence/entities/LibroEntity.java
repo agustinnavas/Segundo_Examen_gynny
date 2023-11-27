@@ -3,16 +3,29 @@ package com.example.segundo_Examen_gynny.Persistence.entities;
 import java.math.BigDecimal;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
 @Entity
 public class LibroEntity {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+
+
     private Long id;
     private String titulo;
     private String isbn;
-    @OneToMany(mappedBy ="libro")
     private BigDecimal precio;
+
+    @ManyToOne
+    @JoinColumn(name = "autor_id")
+    private AutorEntity autor;
+
+
     
     public LibroEntity(Long id, String titulo, String isbn, BigDecimal precio) {
 		super();
