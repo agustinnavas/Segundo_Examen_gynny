@@ -1,11 +1,10 @@
 package com.example.segundo_Examen_gynny.Services;
 
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.segundo_Examen_gynny.Dtos.AutorDTO;
+import com.example.segundo_Examen_gynny.Dtos.LibroDTO;
 import com.example.segundo_Examen_gynny.Mapper.AutorMapper;
 import com.example.segundo_Examen_gynny.Persistence.repository.AutorRepository;
 
@@ -27,6 +26,12 @@ public class AutorServicesImpl implements AutorServices {
 	@Override
 	public AutorDTO listaAutores() {
 		
+		return null;
+	}
+
+	@Override
+	public LibroDTO createLibro(LibroDTO libroDTO) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
